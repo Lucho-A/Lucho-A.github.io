@@ -29,6 +29,26 @@ html[lang="en"] .es { display: none!important; }
 	z-index: 100;
 }
 
+.freeCookieToast{
+	font-family: "Space Mono", Arial, serif;
+	font-size: calc(8px + 4 * ((100vh - 200px) / 1100)) !important;
+	font-weight: 100 !important;	
+	color: var(--blanco) !important;
+	opacity: 1;	
+	background-color: transparent !important;
+	border: 0 !important;
+	border-color: transparent !important;
+	text-align: center;
+	width: auto !important;
+	height: auto !important;
+	justify-content: center !important;
+	align-self: center !important;
+	left: 50%;
+	position: fixed;
+	transform: translate(-50%, 0px);
+	margin-top: 2.5vw;
+}
+
 html, body {
 	overflow: none;
 }

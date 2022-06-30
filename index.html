@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-<link rel="icon" href="https://lucho-alfie.ddns.net/images/fotoPerfil.jpg">
+<link rel="icon" href="images/fotoPerfil.jpg">
 <link href="css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -76,25 +75,22 @@
 					</div>
 					<div class="text-center">
 						<div>
-							<button onclick="return changeLang('es')" type="button" class="btn en textVersion">
-								[Versión en Español]
-							</button>
+							<button onclick="changeLang('es')" type="button" class="btn en textVersion">[Versión en Español]</button>
 						</div>
 						<div>
-							<button onclick="return changeLang('en')" type="button" class="btn es textVersion">
-								[English Version]
-							</button>
+							<button onclick="changeLang('en')" type="button" class="btn es textVersion">[English Version]</button>
 						</div>
 						<div>
-							<button onclick="return show('Page2','Page1');" type="button" class="btn en textBtnAboutMe">
+							<button onclick="show('Page2','Page1');" type="button" class="btn en textBtnAboutMe">
 								<span id="findMoreAboutMe"></span>
 							</button>
 						</div>
 						<div>
-							<button onclick="return show('Page2','Page1');" type="button" class="btn es textBtnAboutMe">
-								[Más Sobre Mí]
-							</button>
+							<button onclick="show('Page2','Page1');" type="button" class="btn es textBtnAboutMe">[Más Sobre Mí]</button>
 						</div>
+					</div>
+					<div id="freeCookieToast" class="toast freeCookieToast" role="alert" aria-live="assertive" aria-atomic="true">
+						<div class="toast-body">(Free cookie site)</div>
 					</div>
 				</div>
 			</div>
@@ -134,38 +130,33 @@
 					<p class="es textPage2">- Desarrollos en C &amp; Java</p>
 					<div class="text-center">
 						<div>
-							<button onclick="location.href='https://github.com/lucho-a'" type="button" class="btn en textBtnGitContact">
-								[Visit my GitHub]
-							</button>
+							<button onclick="location.href='https://github.com/lucho-a'" type="button" class="btn en textBtnGitContact">[Visit my GitHub]</button>
 						</div>
 						<div>
-							<button onclick="location.href='https://github.com/lucho-a'" type="button" class="btn es textBtnGitContact">
-								[Mi GitHub]
-							</button>
+							<button onclick="location.href='https://github.com/lucho-a'" type="button" class="btn es textBtnGitContact">[Mi GitHub]</button>
 						</div>
 						<div>
-							<button onclick="location.href='mailto:luis.alfie@gmail.com'" type="button" class="btn en textBtnGitContact">
-								[Contact]
-							</button>
+							<button onclick="location.href='mailto:luis.alfie@gmail.com'" type="button" class="btn en textBtnGitContact">[Contact]</button>
 						</div>
 						<div>
-							<button onclick="location.href='mailto:luis.alfie@gmail.com'" type="button" class="btn es textBtnGitContact">
-								[Contacto]
-							</button>
+							<button onclick="location.href='mailto:luis.alfie@gmail.com'" type="button" class="btn es textBtnGitContact">[Contacto]</button>
 						</div>
-							<button onclick="return show('Page1','Page2');" type="button" class="btn textBtnBack">
-								[↩]
-							</button>
+						<button onclick="show('Page1','Page2');" type="button" class="btn textBtnBack">[↩]</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	<script>
 		window.onload = function() {
 			var linkElementLnk = document.getElementById("loading");
 			linkElementLnk.style.visibility = "hidden";
 			typingLetters('findMoreAboutMe','[Fimnd More About Me]');
+			linkElementLnk = document.getElementById("loading");
+			var myAlert =document.getElementById('freeCookieToast');
+		    var bsAlert = new bootstrap.Toast(myAlert);
+		    bsAlert.show();
 		};
 	</script>
 </body>
