@@ -46,7 +46,9 @@ html[lang="en"] .es { display: none!important; }
 	left: 50%;
 	position: fixed;
 	transform: translate(-50%, 0px);
-	margin-top: 4vw;
+	margin-top: 2vw;
+	-webkit-transition: all 3s !important;
+    transition:all 3s !important;
 }
 
 html, body {
@@ -79,6 +81,15 @@ body {
 	width: 100% !important;
 	height: 100% !important;
 	color: var(--blanco) !Important;
+}
+
+.controllerPage1{
+	display: flex !Important;
+	flex: wrap !Important;
+	height: 100% !Important;
+	width: 100% !Important;
+	align-items: center !Important;
+	justify-content: center !Important;
 }
 
 .image-overlay {
@@ -174,7 +185,7 @@ body {
 	padding-right: 10vw !important;	
 	padding-top: 1vh !important;
 	padding-bottom: 1vh !important;
-	background-color: var(--blanco) !important;
+	background-color: rgba(240,240,240,1) !important;
 	align-self: center !important;
 }
 

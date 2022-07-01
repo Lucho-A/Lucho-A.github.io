@@ -36,16 +36,17 @@
     		return new Promise(resolve => setTimeout(resolve, ms));
   		}
   		const typingLetters = async(id, msj) => {
+  			let deltaMs=300;
 			let msjLen=msj.length;
 			const el=document.getElementById(id);
 			for(let i=0;i<msjLen;i++){
-				let delay = Math.random() * 400 + 40;
+				let delay = Math.random() * deltaMs + 10;
 				let text=el.textContent;
 				el.innerHTML = text + msj[i];
 				await sleep(delay);
 				if(i===3){
 					el.innerHTML = text + '\b';
-					await sleep(Math.random() * 400 + 40);
+					await sleep(Math.random() * deltaMs + 10);
 				}
 			}
 	}
@@ -57,7 +58,7 @@
 	</header>
 	<div id="Page1">
 		<div class="container-fluidPage1 px-0">
-			<div class="d-flex h-100 w-100 align-items-center justify-content-center">
+			<div class="controllerPage1">
 				<img class="image-overlay" src="images/bgMatrix.jpg" alt="" />
 				<div class=marg>
 					<div class="text-center">
@@ -67,8 +68,8 @@
 						<span class="textNombre">- Luis Alfie -</span>
 					</div>
 					<div class="text-center roles">
-						<span class="en textRoles">IT Auditor, CISA, COBIT - Cybersecurity - C &amp; Java Developer</span> <span lang="es" class="es textRoles">IT
-							Auditor, CISA, COBIT - Ciberseguridad - Desarrollador C &amp; Java</span>
+						<span class="en textRoles">IT Auditor, CISA, COBIT - Cybersecurity - C &amp; Java Developer</span> 
+						<span lang="es" class="es textRoles">IT Auditor, CISA, COBIT - Ciberseguridad - Desarrollador C &amp; Java</span>
 					</div>
 					<div class="text-center">
 						<a target="_blank" href="https://www.linkedin.com/in/luis-alfie/"><img src="iconos/linkedin-16.png" /></a>
@@ -89,7 +90,7 @@
 							<button onclick="show('Page2','Page1');" type="button" class="btn es textBtnAboutMe">[Más Sobre Mí]</button>
 						</div>
 					</div>
-					<div id="freeCookieToast" class="toast freeCookieToast" role="alert" aria-live="assertive" aria-atomic="true">
+					<div id="freeCookieToast" class="toast freeCookieToast" data-bs-delay="4000" role="alert" aria-live="assertive" aria-atomic="true">
 						<div class="toast-body">(Site Free Of Cookies)</div>
 					</div>
 				</div>
@@ -111,13 +112,16 @@
 					<p align=justify>
 						<span class="en textPage2">Information systems professional, specialist in IT audit and security, with solid theoretical, technical and
 							methodological knowledge, and with more than 15 years of experience in the practice of the profession, including local and international
-							experiences in consultancies, banks and insurance companies, among others.</span> <span class="es textPage2">Profesional de sistemas de
+							experiences in consultancies, banks and insurance companies, among others.
+						</span> 
+						<span class="es textPage2">Profesional de sistemas de
 							información, especialista en auditoría y seguridad de TI, con sólidos conocimientos teóricos, técnicos y metodológicos, y con más de 15 años de
 							experiencia en el ejercicio de la profesión, incluyendo experiencias locales e internacionales en consultoras, bancos y compañías aseguradoras,
-							entre otros.</span>
+							entre otros.
+						</span>
 					</p>
-					<p class="en txtMyService">My Services</p>
-					<p class="es txtMyService">Mis Servicios</p>
+					<p class="en txtMyService">Approach</p>
+					<p class="es txtMyService">Propuestas</p>
 					<p class="en textPage2">- IT &amp; Business Processes Audits</p>
 					<p class="es textPage2">- Auditorías de IT &amp; Procesos de Negocio</p>
 					<p class="en textPage2">- Cybersecurity assessments</p>
