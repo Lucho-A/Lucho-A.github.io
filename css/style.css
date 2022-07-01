@@ -6,8 +6,9 @@ html[lang="es"] .en { display: none!important; }
 html[lang="en"] .es { display: none!important; }
 
 :root {
-	--blanco: #f0f0f0;
-	--fontColor: #4d4d4d;
+	--fontColorblanco: #f0f0f0;
+	--bgColorblanco: #f0f0f0;
+	--fontColorNegro: #4d4d4d;
 }
 
 #loading {
@@ -20,7 +21,7 @@ html[lang="en"] .es { display: none!important; }
 	top: 0;
 	left: 0;
 	opacity: 1;
-	background-color: var(--blanco);
+	background-color: var(--bgColorblanco);
 	z-index: 1;
 	flex-flow: column wrap;
 }
@@ -33,7 +34,7 @@ html[lang="en"] .es { display: none!important; }
 	font-family: "Space Mono", Arial, serif;
 	font-size: calc(8px + 4 * ((100vh - 200px) / 1100)) !important;
 	font-weight: 100 !important;	
-	color: var(--blanco) !important;
+	color: var(--fontColorblanco) !important;
 	opacity: 1;	
 	background-color: transparent !important;
 	border: 0 !important;
@@ -67,10 +68,10 @@ body {
 }
 
 
-.container-fluidPage1 {
+.container-fluidPage1, .container-fluidPage2 {
 	font-family: "Space Mono", Arial, serif;
 	opacity: 1;
-	background-color: #FF9000;
+	background-color: rgba(255, 144, 0, 0.9) !important;
 	position: absolute;
 	z-index: 0;
 	margin-top: 0px;
@@ -83,6 +84,14 @@ body {
 	color: var(--blanco) !important;
 }
 
+.container-fluidPage1 {
+	color: var(--fontColorblanco) !important;
+}
+
+.container-fluidPage2 {
+	color: var(--fontColorNegrp) !important;
+}
+
 .controllerPage1{
 	display: flex !important;
 	flex: wrap !important;
@@ -90,21 +99,18 @@ body {
 	width: 100% !important;
 	align-items: center !important;
 	justify-content: center !important;
-	color: var(--blanco) !important;
+	color: var(--fontColorblanco) !important;
 }
 
 .video-overlay {
 	position: absolute !important;
 	object-fit: cover !important;
 	top: 0px !important;
-	/*bottom: 0px !important;
-	right: 0px !important;
-	left: 0px !important; */
-	opacity: .1;
+	opacity: 1;
 	overflow: hidden !important;
 	width: 100% !important;
 	height: 100% !important;
-	z-index: -1;
+	z-index: 0;
 }
 
 .image-overlay {
@@ -170,22 +176,6 @@ body {
 .textBtnAboutMe{
 	font-size: calc(10px + 4 * ((100vh - 200px) / 1100)) !important;
 	color:var(--blanco) !important;
-}
-
-.container-fluidPage2 {
-	font-family: "Space Mono", Arial, serif;
-	color: var(--fontColor);
-	opacity: 1;
-	background-color: #FF9000;
-	position: absolute;
-	z-index: 0;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding: 0;
-	width: 100% !important;
-	height: 100% !important;
 }
 
 .controllerPage2{
@@ -264,36 +254,10 @@ body {
 }
 
 @media (max-width: 750px) {
-	/*#videoBackground{
-		visibility: hidden;
-	}*/
-	/*.container-right {
-		margin-right: 0;
-		margin-left: calc(50vw - 375px);
-	}
-	.flex-container {
-        flex-direction: column;
-        justify-content: center;
-    }*/
 }
 
 @media (min-width :751px) {
-	/*#imgBackground{
-		visibility: hidden;
-	}*/
-	/*.container-right {
-		margin-right: 0;
-		margin-left: calc(50vw - 485px);
-	}
-	.flex-container {
-        flex-direction: column;
-        justify-content: center;
-    }*/
 }
 
 @media (min-width :993px) {
-	/*.container-right {
-		margin-right: 0;
-		margin-left: calc(50vw - 585px);
-	}*/
 }
