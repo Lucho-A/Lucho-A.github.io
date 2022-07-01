@@ -67,7 +67,7 @@ body {
 }
 
 
-.container-fluidPage1 {
+.container-fluid {
 	font-family: "Space Mono", Arial, serif;
 	opacity: 1;
 	background-color: #FF9000;
@@ -80,7 +80,6 @@ body {
 	padding: 0;
 	width: 100% !important;
 	height: 100% !important;
-	color: var(--blanco) !important;
 }
 
 .controllerPage1{
@@ -90,6 +89,8 @@ body {
 	width: 100% !important;
 	align-items: center !important;
 	justify-content: center !important;
+	color: var(--blanco) !important;
+	align-self: center !important;
 }
 
 .video-overlay {
@@ -170,22 +171,6 @@ body {
 	color:var(--blanco) !important;
 }
 
-.container-fluidPage2 {
-	font-family: "Space Mono", Arial, serif;
-	color: var(--fontColor);
-	opacity: 1;
-	background-color: #FF9000;
-	position: absolute;
-	z-index: 0;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding: 0;
-	width: 100% !important;
-	height: 100% !important;
-}
-
 .controllerPage2{
 	display: flex;
 	flex: wrap;
@@ -194,6 +179,7 @@ body {
 	width: auto;
 	align-items: center;
 	justify-content: center;
+	color: var(--fontColor) !important;
 }
 
 .paddPage2{
