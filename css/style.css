@@ -67,6 +67,20 @@ body {
 	height: 100% !important;
 }
 
+.video-overlay{
+	position: absolute !important;
+	object-fit: cover !important;
+	top: 0px !important;
+	opacity: 1;
+	width: 120% !important;
+	height: 120% !important;
+	z-index: 0;
+}
+
+.video-overlay{
+	opacity: 1;
+	z-index: 0;
+}
 
 .container-Page1, .container-Page2 {
 	font-family: "Space Mono", Arial, serif;
@@ -108,21 +122,6 @@ body {
 	min-height: 100vh;
 	height: auto;
 	width: auto;
-}
-
-.video-overlay{
-	position: absolute !important;
-	object-fit: cover !important;
-	top: 0px !important;
-	opacity: 1;
-	width: 100 !important;
-	height: 100 !important;
-	z-index: 0;
-}
-
-.video-overlay{
-	opacity: 1;
-	z-index: 0;
 }
 
 .marg{
