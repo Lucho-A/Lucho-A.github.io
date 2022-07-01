@@ -96,9 +96,9 @@ body {
 	position: absolute !important;
 	object-fit: cover !important;
 	top: 0px !important;
-	bottom: 0px !important;
+	/*bottom: 0px !important;
 	right: 0px !important;
-	left: 0px !important;
+	left: 0px !important; */
 	opacity: .1;
 	overflow: hidden !important;
 	width: 100% !important;
@@ -190,6 +190,8 @@ body {
 	display: flex;
 	flex: wrap;
 	min-height: 100vh;
+	height: auto;
+	width: auto;
 	align-items: center;
 	justify-content: center;
 }
@@ -199,8 +201,8 @@ body {
 	padding-right: 10vw !important;	
 	padding-top: 1vh !important;
 	padding-bottom: 1vh !important;
-	background-color: rgba(240,240,240,0.5) !important;
 	align-self: center !important;
+	background-color: rgba(240,240,240,1) !important;
 }
 
 .txtAboutMe {
@@ -266,7 +268,11 @@ body {
 	/*.container-right {
 		margin-right: 0;
 		margin-left: calc(50vw - 375px);
-	}*/
+	}
+	.flex-container {
+        flex-direction: column;
+        justify-content: center;
+    }*/
 }
 
 @media (min-width :751px) {
@@ -276,7 +282,11 @@ body {
 	/*.container-right {
 		margin-right: 0;
 		margin-left: calc(50vw - 485px);
-	}*/
+	}
+	.flex-container {
+        flex-direction: column;
+        justify-content: center;
+    }*/
 }
 
 @media (min-width :993px) {
