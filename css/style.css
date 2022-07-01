@@ -260,13 +260,19 @@ body {
 }
 
 @media (max-width: 750px) {
+	#videoBackground{
+		visibility: hidden;
+	}
 	/*.container-right {
 		margin-right: 0;
 		margin-left: calc(50vw - 375px);
 	}*/
 }
 
-@media (max-width :992px) {
+@media (min-width :751px) {
+	#imgBackground{
+		visibility: hidden;
+	}
 	/*.container-right {
 		margin-right: 0;
 		margin-left: calc(50vw - 485px);
