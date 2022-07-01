@@ -68,9 +68,8 @@ body {
 }
 
 
-.container-fluidPage1, .container-fluidPage2 {
+.container-Page1, .container-Page2 {
 	font-family: "Space Mono", Arial, serif;
-	opacity: 1;
 	background-color: rgba(255, 144, 0, 0.9) !important;
 	position: absolute;
 	z-index: 0;
@@ -81,28 +80,36 @@ body {
 	padding: 0;
 	width: 100% !important;
 	height: 100% !important;
-	color: var(--blanco) !important;
 }
 
-.container-fluidPage1 {
+.container-Page1 {
 	color: var(--fontColorblanco) !important;
 }
 
-.container-fluidPage2 {
+.container-Page2 {
 	color: var(--fontColorNegrp) !important;
 }
 
-.controllerPage1{
+.controllerPage1, .controllerPage2{
 	display: flex !important;
 	flex: wrap !important;
 	height: 100% !important;
 	width: 100% !important;
 	align-items: center !important;
 	justify-content: center !important;
+}
+
+.controllerPage1{
 	color: var(--fontColorblanco) !important;
 }
 
-.video-overlay {
+.controllerPage2{
+	min-height: 100vh;
+	height: auto;
+	width: auto;
+}
+
+.video-overlay, .image-overlay{
 	position: absolute !important;
 	object-fit: cover !important;
 	top: 0px !important;
@@ -113,13 +120,13 @@ body {
 	z-index: 0;
 }
 
+.video-overlay{
+	opacity: 1;
+	z-index: 0;
+}
+
 .image-overlay {
-	position: absolute !important;
-	object-fit: cover !important;
-	top: 0px !important;
 	opacity: .1 !important;
-	width: 100% !important;
-	height: 100% !important;
 	z-index: -1 !important;
 }
 
@@ -176,16 +183,6 @@ body {
 .textBtnAboutMe{
 	font-size: calc(10px + 4 * ((100vh - 200px) / 1100)) !important;
 	color:var(--blanco) !important;
-}
-
-.controllerPage2{
-	display: flex;
-	flex: wrap;
-	min-height: 100vh;
-	height: auto;
-	width: auto;
-	align-items: center;
-	justify-content: center;
 }
 
 .paddPage2{

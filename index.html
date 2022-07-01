@@ -23,12 +23,6 @@
 			document.getElementById(hidden).style.display = 'none';
 			return false;
 		}
-		function showBackground() {
-			var linkElementLnk = document.getElementById("videoBackground");
-			linkElementLnk.style.visibility='visible';
-			linkElementLnk.play(); 
-			return false;
-		}
 	</script>
 	<script>
 		const changeLang = (languageCode) => {document.documentElement.setAttribute("lang", languageCode);};
@@ -62,11 +56,11 @@
 			<div style="width: 1px; height: 1px; visibility: hidden; overflow: hidden"></div>
 		</div>
 	</header>
-	<video id="videoBackground" class="video-overlay" autoplay loop muted style="visibility: hidden">
+	<video id="videoBackground" class="video-overlay" autoplay loop muted>
 		<source src="videos/MatrixCode1080-Red.mp4" type="video/mp4">
 	</video>
 	<div id="Page1">
-		<div class="container-fluidPage1 px-0">
+		<div class="container-fluid px-0 container-Page1">
 			<div class="controllerPage1">
 				<div class=marg>
 					<div class="text-center">
@@ -76,8 +70,8 @@
 						<span class="textNombre">- Luis Alfie -</span>
 					</div>
 					<div class="text-center roles">
-						<span class="en textRoles">IT Auditor, CISA, COBIT - Cybersecurity - C &amp; Java Developer</span> <span lang="es" class="es textRoles">IT
-							Auditor, CISA, COBIT - Ciberseguridad - Desarrollador C &amp; Java</span>
+						<span class="en textRoles">IT Auditor, CISA, COBIT - Cybersecurity - C &amp; Java Developer</span> 
+						<span lang="es" class="es textRoles">IT Auditor, CISA, COBIT - Ciberseguridad - Desarrollador C &amp; Java</span>
 					</div>
 					<div class="text-center">
 						<a target="_blank" href="https://www.linkedin.com/in/luis-alfie/"><img src="iconos/linkedin-16.png" /></a>
@@ -106,7 +100,7 @@
 		</div>
 	</div>
 	<div id="Page2" style="display: none">
-		<div class="container-fluidPage2 px-0">
+		<div class="container-fluid px-0 container-Page2">
 			<div class="controllerPage2">
 				<div class="paddPage2">
 					<div class="text-center">
@@ -119,7 +113,8 @@
 					<p align=justify>
 						<span class="en textPage2">Information systems professional, specialist in IT audit and security, with solid theoretical, technical and
 							methodological knowledge, and with more than 15 years of experience in the practice of the profession, including local and international
-							experiences in consultancies, banks and insurance companies, among others. </span> <span class="es textPage2">Profesional de sistemas de
+							experiences in consultancies, banks and insurance companies, among others. </span> 
+							<span class="es textPage2">Profesional de sistemas de
 							información, especialista en auditoría y seguridad de TI, con sólidos conocimientos teóricos, técnicos y metodológicos, y con más de 15 años de
 							experiencia en el ejercicio de la profesión, incluyendo experiencias locales e internacionales en consultoras, bancos y compañías aseguradoras,
 							entre otros. </span>
@@ -160,7 +155,6 @@
 		window.onload = function() {
 			var linkElementLnk = document.getElementById("loading");
 			linkElementLnk.style.visibility = "hidden";
-			showBackground();
 			typingLetters('findMoreAboutMe','[Fimnd More About Me]');
 			linkElementLnk = document.getElementById("loading");
 			var myAlert =document.getElementById('freeCookieToast');
