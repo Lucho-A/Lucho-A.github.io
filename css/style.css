@@ -72,8 +72,8 @@ body {
 	object-fit: cover !important;
 	top: 0px !important;
 	opacity: 1;
-	width: 120% !important;
-	height: 120% !important;
+	/*width: 150% !important;
+	height: 150% !important;*/
 	z-index: 0;
 }
 

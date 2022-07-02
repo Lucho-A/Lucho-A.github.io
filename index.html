@@ -58,7 +58,6 @@
 		</div>
 	</header>
 	<video id="videoBackground" class="video-overlay" autoplay loop muted>
-		<source src="videos/MatrixCode1080-Red.mp4" type="video/mp4">
 	</video>
 	<div id="Page1">
 		<div class="container-fluid px-0 container-Page1">
@@ -154,6 +153,17 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	<script>
 		window.onload = function() {
+			const v = document.querySelector("#videoBackground");
+			if(screen.height<=720){
+				v.setAttribute("src", "videos/MatrixCode-Android.mp4");
+				v.setAttribute("width", "100%");
+				v.setAttribute("height", "100%")
+			}else{
+				v.setAttribute("src", "videos/MatrixCode.mp4");
+				v.setAttribute("width", "120%");
+				v.setAttribute("height", "120%")
+			}
+			v.load();
 			var linkElementLnk = document.getElementById("loading");
 			linkElementLnk.style.visibility = "hidden";
 			typingLetters('findMoreAboutMe','[Fimnd More About Me]');
@@ -174,15 +184,17 @@
 		});
 	</script>
 	<script>
-		const el = document.querySelector("#Page1");
-		const v = document.querySelector("#videoBackground");
-		const windowWidth = window.innerWidth / 5;
-		const windowHeight = window.innerHeight / 5 ;
-		el.addEventListener("mousemove", (e) => {
-			const mouseX = e.clientX / windowWidth;
-			const mouseY = e.clientY / windowHeight;
-			v.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
-		});
+		if(screen.height>=720){
+			const v = document.querySelector("#videoBackground");
+			const el = document.querySelector("#Page1");
+			const windowWidth = window.innerWidth / 5;
+			const windowHeight = window.innerHeight / 5 ;
+			el.addEventListener("mousemove", (e) => {
+				const mouseX = e.clientX / windowWidth;
+				const mouseY = e.clientY / windowHeight;
+				v.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
+			});
+		}
 	</script>
 </body>
 </html>
