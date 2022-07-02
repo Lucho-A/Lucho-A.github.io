@@ -210,6 +210,9 @@ body {
 .textBtnBack{
 	font-size: calc(8px + 4 * ((100vh - 200px) / 1100)) !important;
 }
+.textBtnBack404500{
+	color: var(--fontColorblanco) !important;
+}
 
 .text-center {
 	text-align: center;
