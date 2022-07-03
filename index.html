@@ -165,21 +165,22 @@
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 	<script>
-		function isBgReady(){
-			const v = document.querySelector('#videoBackground');
-			v.play();
-			v.onplay = (event) => {return true};
-			return false;
-		}
-	</script>
-	<script>
 		window.onload = function() {
-			document.getElementById("videoBackground").play();
-			while(isBgReady());
-			document.getElementById("loading").style.visibility = "hidden";
-			typingLetters('findMoreAboutMe','[Fimnd More About Me]');
-		    var bsAlert = new bootstrap.Toast(document.getElementById('freeCookieToast'));
-		    bsAlert.show();
+			var interval = setInterval(bufferBgVideo, 500);
+			const vi = document.getElementById("videoBackground");
+			function bufferBgVideo(){
+				if(vi.currentTime>3.0){
+					clearInterval(interval);
+					document.getElementById("loading").style.visibility = "hidden";
+					typingLetters('findMoreAboutMe','[Fimnd More About Me]');
+				    var bsAlert = new bootstrap.Toast(document.getElementById('freeCookieToast'));
+				    bsAlert.show();
+				}
+			}
+			// for some reason fail into while
+			/*while(vi.currentTime<3.0){
+				alert(vi.currentTime); //except using alert! ?!?!?!?
+			}*/
 		};
 	</script>
 	<script>

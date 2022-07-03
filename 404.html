@@ -95,10 +95,15 @@
 	</script>
 	<script>
 		window.onload = function() {
-			document.getElementById("videoBackground").play();
-			while(isBgReady());
-			document.getElementById("loading").style.visibility = "hidden";
-			typingLetters('fileNotFound','- 400: ¡File Not Foiund! -');
+			var interval = setInterval(bufferBgVideo, 500);
+			const vi = document.getElementById("videoBackground");
+			function bufferBgVideo(){
+				if(vi.currentTime>3.0){
+					clearInterval(interval);
+					document.getElementById("loading").style.visibility = "hidden";
+					typingLetters('fileNotFound','- 400: ¡File Not Foiund! -');
+				}
+			}
 		};
 	</script>
 	<script>
