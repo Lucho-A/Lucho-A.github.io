@@ -86,17 +86,17 @@
 		</div>
 	</div>
 	<script>
-		function isBgPlaying(){
+		function isBgReady(){
 			const v = document.querySelector('#videoBackground');
 			v.play();
-			v.onplay = (event) => {return v.paused;};
-			return v.paused;
+			v.onplay = (event) => {return true};
+			return false;
 		}
 	</script>
 	<script>
 		window.onload = function() {
 			document.getElementById("videoBackground").play();
-			while(isBgPlaying());
+			while(isBgReady());
 			document.getElementById("loading").style.visibility = "hidden";
 			typingLetters('fileNotFound','- 400: ¡File Not Foiund! -');
 		};
