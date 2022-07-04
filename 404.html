@@ -90,11 +90,13 @@
 			const vi = document.getElementById("videoBackground");
 			let cont=0;
 			function bufferBgVideo(){
-				if(vi.buffered.end(0)>=3.0 || cont>=5){
+				if(vi.buffered.end(0)>=2.0 || cont>=5){
 					clearInterval(interval);
 					vi.play();
-					document.getElementById("loading").style.visibility = "hidden";
-					typingLetters('fileNotFound','- 400: ¡File Not Foiund! -');
+					setTimeout(()=>{
+						document.getElementById("loading").style.visibility = "hidden";
+						typingLetters('fileNotFound','- 400: ¡File Not Foiund! -');
+					},500);
 				}
 			}
 		};
