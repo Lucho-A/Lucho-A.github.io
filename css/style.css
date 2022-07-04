@@ -28,6 +28,8 @@ html[lang="en"] .es { display: none!important; }
 
 #loading-image {
 	z-index: 100;
+	justify-content: center;
+	align-items: center;
 }
 
 .freeCookieToast{
