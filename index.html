@@ -35,13 +35,17 @@
   			const deltaMs=300;
   			const msjLen=msj.length;
 			const el=document.getElementById(id);
+			const wrongLetter =  Math.round(Math.random() * (msjLen - 2) + 1);
 			for(let i=0;i<msjLen;i++){
-				let delay = Math.random() * deltaMs + 10;
 				let text=el.textContent;
 				el.innerHTML = text + msj[i];
-				await sleep(delay);
-				if(i===3){
+				await sleep(Math.random() * deltaMs + 10);
+				if(i===wrongLetter){
+					el.innerHTML = text + String.fromCharCode(msj[i].charCodeAt(0) + 1);
+					await sleep(Math.random() * deltaMs + 10);
 					el.innerHTML = text + '\b';
+					await sleep(Math.random() * deltaMs + 10);
+					el.innerHTML = text + msj[i];
 					await sleep(Math.random() * deltaMs + 10);
 				}
 			}
@@ -175,7 +179,7 @@
 					vi.play();
 					setTimeout(()=>{
 						document.getElementById("loading").style.visibility = "hidden";
-						typingLetters('findMoreAboutMe','[Fimnd More About Me]');
+						typingLetters('findMoreAboutMe','[Find More About Me]');
 				    	var bsAlert = new bootstrap.Toast(document.getElementById('freeCookieToast'));
 				    	bsAlert.show();
 					},500);
@@ -189,7 +193,7 @@
 			var linkElementLnk = document.getElementById("videoBackground");
   			linkElementLnk.play();
 		});
-			window.addEventListener('blur', function() {
+		window.addEventListener('blur', function() {
 			var linkElementLnk = document.getElementById("videoBackground");
   			linkElementLnk.play();
 		});
