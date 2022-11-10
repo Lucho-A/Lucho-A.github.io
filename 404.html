@@ -49,19 +49,6 @@
 	<video id="videoBackground" class="video-overlay" loop muted>
 	</video>
 	<div id="loading">
-		<script type="text/javascript">
-			const v = document.querySelector("#videoBackground");
-			if(screen.height<=720){
-				v.setAttribute("src", "videos/MatrixCode-Android.mp4");
-				v.setAttribute("width", "100%");
-				v.setAttribute("height", "100%");
-			}else{
-				v.setAttribute("src", "videos/MatrixCode.mp4");
-				v.setAttribute("width", "120%");
-				v.setAttribute("height", "120%");
-			}
-			v.load();
-		</script>
 		<div id="loading-image" class="spinner-border text-primary" style="width: 4rem; height: 4rem;" role="status"></div>
 		<div style="width: 1px; height: 1px; visibility: hidden; overflow: hidden"></div>
 	</div>
@@ -113,17 +100,28 @@
 		});
 	</script>
 	<script>
-		if(screen.height>=720){
-			const v = document.querySelector("#videoBackground");
+		let details = navigator.userAgent;
+		let regexp = /android|Android|iphone|Iphone|kindle|Kindle|ipad/i;
+		let isMobileDevice = regexp.test(details);
+		const v = document.querySelector("#videoBackground");
+		if(isMobileDevice==false){
 			const el = document.querySelector("#Page1");
 			const windowWidth = window.innerWidth / 5;
 			const windowHeight = window.innerHeight / 5 ;
+			v.setAttribute("src", "videos/MatrixCode.mp4");
+			v.setAttribute("width", "120%");
+			v.setAttribute("height", "120%");
 			el.addEventListener("mousemove", (e) => {
 				const mouseX = e.clientX / windowWidth;
 				const mouseY = e.clientY / windowHeight;
 				v.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
 			});
+		}else{
+			v.setAttribute("src", "videos/MatrixCode-Android.mp4");
+			v.setAttribute("width", "100%");
+			v.setAttribute("height", "100%");	
 		}
+		v.load();
 	</script>
 </body>
 </html>
